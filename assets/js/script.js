@@ -6,9 +6,15 @@ var taskFormHandler = function(event) {
     var taskNameInput = document.querySelector("input[name='task-name']").value;
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
 
-    // add entire list item to list
-    tasksToDoEl.appendChild(listItemEl);
-};
+    //package up data as an object
+    var taskDataObj = {
+        name: taskNameInput,
+        type: taskTypeInput
+    };
+
+    // send it as an argumnet to createTaskEl
+    createTaskEl(taskDataObj);
+}
 
 var createTaskEl = function(taskDataObj) {
     // create list item
