@@ -67,6 +67,7 @@ var createTaskActions = function(taskId) {
 
     actionContainerEl.appendChild(deleteButtonEl);
     
+    return actionContainerEl;
 };
 
 formEl.addEventListener("submit", taskFormHandler);
