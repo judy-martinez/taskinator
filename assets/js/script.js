@@ -68,6 +68,18 @@ var createTaskActions = function(taskId) {
     statusSelectEl.setAttribute("name", "status-change");
     statusSelectEl.setAttribute("data-task-id", taskId);
     actionContainerEl.appendChild(statusSelectEl);
+    // create status choices
+    var statusChoices = ["To Do", "In Progress", "Completed"];
+
+    for (var i = 0; i < statusChoices.length; i++) {
+    // create option element
+    var statusOptionEl = document.createElement("option");
+    statusOptionEl.setAttribute("value", statusChoices[i]);
+    statusOptionEl.textContent = statusChoices[i];
+
+    // append to select
+    statusSelectEl.appendChild(statusOptionEl);
+  }
     
     return actionContainerEl;
 };
