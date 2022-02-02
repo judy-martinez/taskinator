@@ -91,11 +91,15 @@ var createTaskActions = function(taskId) {
 var taskButtonHandler = function(event) {
     console.log(event.target);
 
-    if(event.target.matches(".delete-btn")) {
+    if (event.target.matches(".delete-btn")) {
         // get the element's task id
         var taskID = event.target.getAttribute("data-task-id");
         console.log("you clicked a delete button!");
     }
+};
+
+var deleteTask = function(taskId) {
+    console.log(taskId);
 };
 
 // Create a new task
