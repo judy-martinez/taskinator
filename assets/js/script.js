@@ -88,6 +88,10 @@ var createTaskActions = function(taskId) {
     return actionContainerEl;
 };
 
+var taskButtonHandler = function(event) {
+    console.log(event.target);
+};
+
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
