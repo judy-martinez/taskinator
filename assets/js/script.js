@@ -98,6 +98,10 @@ var createTaskActions = function(taskId) {
     return actionContainerEl;
 };
 
+var completeEditTask = function(taskName, taskType, taskId) {
+    console.log(taskName, taskType, taskId);
+};
+
 var taskButtonHandler = function(event) {
     //get target element from event
     var targetEl = event.target;
