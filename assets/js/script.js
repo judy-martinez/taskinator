@@ -118,8 +118,12 @@ var editTask = function(taskId) {
     var taskType = taskSelected.querySelector("span.task-type").textContent;
     console.log(taskType);
 
+    // write values of taskname and tasktype to form to be edited
     document.querySelector("input[name='task-name']").value = taskName;
     document.querySelector("select[name='task-type']").value = taskType;
+
+    // set data attribute to the form with a value of the task's id so it knows which one is being edited
+    document.querySelector("#save-task").textContent = "Save Task";
 };
 
 var deleteTask = function(taskId) {
