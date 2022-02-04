@@ -89,12 +89,19 @@ var createTaskActions = function(taskId) {
 };
 
 var taskButtonHandler = function(event) {
-    console.log(event.target);
+    //get target element from event
+    var targetEl = event.target;
 
-    if (event.target.matches(".delete-btn")) {
+    // edit button was clicked
+    if (targetEl.matches(".edit-btn")) {
+        var taskId = targetEl.attribute("data-task-id");
+        editTask(taskId);
+    }
+    // delete button was clicked
+    else if (targetEl.matches(".delete-btn")) {
         // get the element's task id
-        var taskID = event.target.getAttribute("data-task-id");
-        console.log("you clicked a delete button!");
+        var taskId = targetEl.getAttribute("data-task-id");
+        deleteTask(taskId);
     }
 };
 
