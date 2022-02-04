@@ -105,6 +105,13 @@ var taskButtonHandler = function(event) {
     }
 };
 
+var editTask = function(taskId) {
+    console.log("editing task #" + taskId);
+
+    //get task list item element
+    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+};
+
 var deleteTask = function(taskId) {
     console.log(taskId);
     // find task list element with taskId value and remove it
