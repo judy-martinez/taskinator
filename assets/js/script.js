@@ -36,7 +36,6 @@ var taskFormHandler = function(event) {
             name: taskNameInput,
             type: taskTypeInput
         };
-
         // send it as an argument to createTaskEl
         createTaskEl(taskDataObj);
     }
@@ -70,7 +69,7 @@ var createTaskActions = function(taskId) {
     var actionContainerEl = document.createElement("div");
     actionContainerEl.className = "task-actions";
     // create edit button
-    var editButtonEl =  document.createElement("button");
+    var editButtonEl = document.createElement("button");
     editButtonEl.textContent = "Edit";
     editButtonEl.className = "btn edit-btn";
     editButtonEl.setAttribute("data-task-id", taskId);
@@ -82,7 +81,7 @@ var createTaskActions = function(taskId) {
     deleteButtonEl.setAttribute("data-task-id", taskId);
     actionContainerEl.appendChild(deleteButtonEl);
     // create change status dropdown
-    varStatusSelectEl = document.createElement("select");
+    var statusSelectEl = document.createElement("select");
     statusSelectEl.setAttribute("name", "status-change");
     statusSelectEl.setAttribute("data-task-id", taskId);
     statusSelectEl.className = "select-status";
@@ -91,14 +90,14 @@ var createTaskActions = function(taskId) {
     var statusChoices = ["To Do", "In Progress", "Completed"];
 
     for (var i = 0; i < statusChoices.length; i++) {
-    // create option element
-    var statusOptionEl = document.createElement("option");
-    statusOptionEl.setAttribute("value", statusChoices[i]);
-    statusOptionEl.textContent = statusChoices[i];
-
-    // append to select
-    statusSelectEl.appendChild(statusOptionEl);
-  }
+        // create option element
+        var statusOptionEl = document.createElement("option");
+        statusOptionEl.setAttribute("value", statusChoices[i]);
+        statusOptionEl.textContent = statusChoices[i];
+    
+        // append to select
+        statusSelectEl.appendChild(statusOptionEl);
+    }
     
     return actionContainerEl;
 };
