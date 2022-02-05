@@ -141,6 +141,16 @@ var taskStatusChangeHandler = function(event) {
 
     //find the parent task item element based on the id
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+
+    if (statusValue === "to do") {
+        tasksToDoEl.appendChild(taskSelected);
+    }
+    else if (statusValue === "in progress") {
+        tasksInProgressEl.appendChild(taskSelected);
+    }
+    else if (statusValue === "completed") {
+        tasksCompletedEl.appendChild(taskSelected);
+    }
 };
 
 var editTask = function(taskId) {
