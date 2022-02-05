@@ -131,6 +131,7 @@ var taskButtonHandler = function(event) {
 };
 
 var taskStatusChangeHandler = function(event) {
+    console.log(event.target.value);
 
 };
 
