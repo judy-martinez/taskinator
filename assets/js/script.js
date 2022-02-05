@@ -133,6 +133,14 @@ var taskButtonHandler = function(event) {
 var taskStatusChangeHandler = function(event) {
     console.log(event.target.value);
 
+    //get the task item's id
+    var taskId = event.target.getAttribute("data-task-id");
+
+    //get the currently selected option's value and convert to lowercase
+    var statusValue = event.target.value.toLowerCase();
+
+    //find the parent task item element based on the id
+    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
 };
 
 var editTask = function(taskId) {
