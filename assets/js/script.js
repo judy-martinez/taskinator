@@ -174,7 +174,6 @@ var editTask = function(taskId) {
 
     // set data attribute to the form with a value of the task's id so it knows which one is being edited
     formEl.setAttribute("data-task-id", taskId);
-
     // update form's button to reflect editing a task rather than creating a new one
     document.querySelector("#save-task").textContent = "Save Task";
 };
