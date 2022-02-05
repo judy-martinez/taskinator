@@ -130,6 +130,10 @@ var taskButtonHandler = function(event) {
     }
 };
 
+var taskStatusChangeHandler = function(event) {
+
+};
+
 var editTask = function(taskId) {
     console.log("editing task #" + taskId);
 
@@ -166,3 +170,6 @@ formEl.addEventListener("submit", taskFormHandler);
 
 // for edit and delete buttons
 pageContentEl.addEventListener("click", taskButtonHandler);
+
+// for changing the status
+pageContentEl.addEventListener("change", taskStatusChangeHandler);
