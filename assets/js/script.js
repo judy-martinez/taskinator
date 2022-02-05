@@ -124,7 +124,7 @@ var taskButtonHandler = function(event) {
     // edit button was clicked
     if (targetEl.matches(".edit-btn")) {
         console.log("edit", targetEl);
-        var taskId = targetEl.attribute("data-task-id");
+        var taskId = targetEl.getattribute("data-task-id");
         editTask(taskId);
     }
     // delete button was clicked
