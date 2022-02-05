@@ -156,7 +156,7 @@ var taskStatusChangeHandler = function(event) {
 };
 
 var editTask = function(taskId) {
-    console.log("editing task #" + taskId);
+    console.log(taskId);
 
     //get task list item element
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
@@ -187,9 +187,7 @@ var deleteTask = function(taskId) {
 
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
-
 // for edit and delete buttons
 pageContentEl.addEventListener("click", taskButtonHandler);
-
 // for changing the status
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
