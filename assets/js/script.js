@@ -121,6 +121,14 @@ var completeEditTask = function(taskName, taskType, taskId) {
     taskSelected.querySelector("h3.task-name").textContent = taskName;
     taskSelected.querySelector("span.task-type").textContent = taskType;
 
+    for (var i = 0; i< tasks.length; i++) {
+        if (tasks[i].id === parseInt(taskId)) {
+            tasks[i].name = taskName;
+            tasks[i].type = taskType;
+        }
+
+    };
+
     alert("Task Updated");
     // remove data attribute from form
     formEl.removeAttribute("data-task-id");
