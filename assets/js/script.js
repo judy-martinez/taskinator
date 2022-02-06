@@ -246,6 +246,12 @@ var deleteTask = function(taskId) {
 
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
+};
+
+var loadTasks = function() {
+    // 1. Gets task items from localStorage.
+    // 2. Converts tasks from the string format back into an array of objects.
+    // 3. Iterates through a tasks array and creates task elements on the page from it.    
 }
 
 // Create a new task
