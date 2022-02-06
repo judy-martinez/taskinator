@@ -37,8 +37,9 @@ var taskFormHandler = function(event) {
         //package up data as an object
         var taskDataObj = {
             name: taskNameInput,
-            type: taskTypeInput
-        };
+            type: taskTypeInput,
+            status: "to do"
+        }
         // send it as an argument to createTaskEl
         createTaskEl(taskDataObj);
     }
