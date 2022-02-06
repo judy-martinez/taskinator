@@ -6,6 +6,9 @@ var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
 var pageContentEl = document.querySelector("#page-content");
 
+// create array to hold tasks for saving
+var tasks = [];
+
 var taskFormHandler = function(event) {
     event.preventDefault();
     var taskNameInput = document.querySelector("input[name='task-name']").value;
@@ -124,7 +127,7 @@ var taskButtonHandler = function(event) {
     // edit button was clicked
     if (targetEl.matches(".edit-btn")) {
         console.log("edit", targetEl);
-        var taskId = targetEl.getattribute("data-task-id");
+        var taskId = targetEl.getAttribute("data-task-id");
         editTask(taskId);
     }
     // delete button was clicked
