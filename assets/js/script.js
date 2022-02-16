@@ -253,9 +253,9 @@ var loadTasks = function() {
     var savedTasks = localStorage.getitem("tasks");
     // if there are no tasks, set tasks to an empty array and return out of the function
     if (!savedTasks) {
-        tasks = [];
         return false;
     }
+    console.log("Saved tasks found!")
     // else, load up saved tasks
 
     // parse/convert tasks from the string format back into array of objects
