@@ -237,9 +237,13 @@ var deleteTask = function(taskId) {
 
     // reassign tasks array to be the same as updatedTaskArr
     tasks = updatedTaskArr;
-    saveTasks();
+
+    //save tasks to localStorage
+    var saveTasks = function() {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
 };
-//save tasks to localStorage
+
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -249,9 +253,9 @@ var loadTasks = function() {
     var savedTasks = localStorage.getitem("tasks");
     // if there are no tasks, set tasks to an empty array and return out of the function
     if (!savedTasks) {
+        tasks = [];
         return false;
     }
-    console.log("Saved tasks found!")
     // else, load up saved tasks
 
     // parse/convert tasks from the string format back into array of objects
@@ -262,7 +266,7 @@ var loadTasks = function() {
         // pass each task object into the `createTaskEl()` function
         createTaskEl(savedTasks[i]);
     }
-};
+}
 
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
