@@ -266,7 +266,7 @@ var loadTasks = function() {
         // pass each task object into the `createTaskEl()` function
         createTaskEl(savedTasks[i]);
     }
-}
+};
 
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
