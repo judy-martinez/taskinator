@@ -79,18 +79,13 @@ var createTaskEl = function(taskDataObj) {
           console.log("Something went wrong!");
       }
 
-    //save tasks to localStorage
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+    // save task as an object with name, type, status, and id properties then push it into tasks array
+    taskDataObj.id = taskIdCounter;
 
+    tasks.push(taskDataObj);
 
-    
-    // add entire list item to list
-    tasksToDoEl.appendChild(listItemEl);
-
-    console.log(taskDataObj);
-    console.log(taskDataObj.status);
+    // save tasks to localStorage
+    saveTasks();
 
     // increase task counter for next unique id
     taskIdCounter++;
