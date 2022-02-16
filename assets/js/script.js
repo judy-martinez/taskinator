@@ -190,9 +190,7 @@ var taskStatusChangeHandler = function(event) {
     }
 
     //save tasks to localStorage
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+    saveTasks();
 };
 
 var editTask = function(taskId) {
