@@ -133,7 +133,7 @@ var completeEditTask = function(taskName, taskType, taskId) {
             tasks[i].type = taskType;
         }
 
-    };
+    }
 
     alert("Task Updated");
     // remove data attribute from form
@@ -141,9 +141,7 @@ var completeEditTask = function(taskName, taskType, taskId) {
     // update formEl button to go back to saying "Add Task" instead of "Edit Task"
     document.querySelector("#save-task").textContent = "Add Task";
     //save tasks to localStorage
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+    saveTasks();
 };
 
 var taskButtonHandler = function(event) {
