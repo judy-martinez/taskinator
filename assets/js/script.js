@@ -237,13 +237,9 @@ var deleteTask = function(taskId) {
 
     // reassign tasks array to be the same as updatedTaskArr
     tasks = updatedTaskArr;
-
-    //save tasks to localStorage
-    var saveTasks = function() {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+    saveTasks();
 };
-
+//save tasks to localStorage
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
